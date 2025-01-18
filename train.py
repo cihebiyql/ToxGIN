@@ -265,7 +265,7 @@ def run():
     df = pd.read_csv('peptide.csv', index_col=0)
     labels = df['label'].values
     skf = StratifiedKFold(n_splits=5, shuffle=True, random_state=3407)  
-    model_output_dir = 'output_4_22'  
+    model_output_dir = 'output_model'  
     os.makedirs(model_output_dir, exist_ok=True)  
     initial_time = time.strftime("%Y%m%d-%H%M%S")
     filename = f"{model_output_dir}/training_log_{initial_time}.csv"
